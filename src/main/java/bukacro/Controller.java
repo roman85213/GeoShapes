@@ -46,7 +46,6 @@ public class Controller {
             .POST(HttpRequest.BodyPublishers.noBody())
             .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
         return response.body();
     }
 

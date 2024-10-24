@@ -13,6 +13,7 @@ public class Shape {
 
     public Shape(String type, Shape inputShape) {
         this.type = type;
+        this.area = inputShape.area;
         this.circumference = inputShape.circumference;
         this.a = inputShape.a;
         this.b = inputShape.b;
