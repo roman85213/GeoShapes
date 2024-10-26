@@ -1,0 +1,56 @@
+= GeoShapes
+
+== Zadání
+
+Napište webovou aplikaci, která:
+
+* Odešle POST požadavek na určenou adresu
+* Jako odpověď obdrží JSON s popisem geometrického tvaru (3 různé náhodně
+vygenerované typy).
+* Každému vrácenému geometrickému tvaru bude chybět náhodný atribut (typ, obvod,
+strana, poloměr apod.). Aplikace by měla detekovat, o jaký typ geometrického tvaru
+se jedná, a chybějící atribut doplnit.
+* Grafická část aplikace bude obsahovat jedno tlačítko a dvě textová pole. Po stisku
+tlačítka se do prvního textového pole vypíše hodnota obdržená z POST požadavku a
+do druhého textového pole se vypíše celková hodnota i s chybějícím atributem.
+
+== Zpracování
+
+Program obsahuje dvě hlavní části a to `Controller` a `ShapeGUI`.
+ShapeGUI pouze zobrazuje data, které mu poskytne Controller.
+Vstupní JSON data jsou zpracováná pomocí třídy `ObjectMapper`, který vytvoří instanci třídy `Shape`. Do nevyplněných hodnot dosadí null.
+
+[source,java]
+----
+class Controller {
+    public ArrayList<Shape> getShapes() throws JsonProcessingException {
+        ArrayList<Shape> shapeList = new ArrayList<>();
+        String jsonData;
+        try {
+            jsonData = makeRequest();
+        } catch (IOException | InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.disable(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES);
+        objectMapper.setVisibility(VisibilityChecker.Std.defaultInstance().withFieldVisibility(JsonAutoDetect.Visibility.ANY));
+        Shape inputShape = objectMapper.readValue(jsonData, Shape.class);
+        Shape fullShape = fulfillData(inputShape);
+        shapeList.add(inputShape);
+        shapeList.add(fullShape);
+        return shapeList;
+    }
+
+    public String makeRequest() throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(URL))
+            .POST(HttpRequest.BodyPublishers.noBody())
+            .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return response.body();
+    }
+}
+----
+
+Při samotném doplňování se nejdříve zjistí typ tvaru. Podle toho se vytvoří objekt stejnojmenné třídy. Pokud není uveden typ tvaru, tak se zjistí, které hodnoty jsou zadané a podle toho se určí typ. Chybějící atribut je dopočítán při vytváření obejktu viz další metody.
