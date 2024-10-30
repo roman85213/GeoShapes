@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee92ff2d-c625-4664-a21e-eb151cb66f1a" name="Changes" comment="POST request, GUI create">
+    <list default="true" id="ee92ff2d-c625-4664-a21e-eb151cb66f1a" name="Changes" comment="Documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bukacro/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bukacro/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bukacro/ShapeGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bukacro/ShapeGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bukacro/ShapeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bukacro/ShapeGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bukacro/model/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bukacro/model/Shape.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +19,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Empty" />
       </list>
     </option>
   </component>
@@ -42,6 +41,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "Empty",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -80,8 +80,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-temurin-17.0.10-4caba194b151-f6707456" />
-        <option value="jdk-17.0.9-temurin-17.0.9-4caba194b151-2f65f212" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -97,7 +97,8 @@
       <workItem from="1729537358056" duration="5897000" />
       <workItem from="1729687785458" duration="6294000" />
       <workItem from="1729718319425" duration="1693000" />
-      <workItem from="1729750140029" duration="4392000" />
+      <workItem from="1729750140029" duration="4804000" />
+      <workItem from="1729966312401" duration="3302000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <option name="closed" value="true" />
@@ -115,15 +116,44 @@
       <option name="project" value="LOCAL" />
       <updated>1729546608875</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="responsive GUI">
+      <option name="closed" value="true" />
+      <created>1729758777553</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729758777553</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Documentation">
+      <option name="closed" value="true" />
+      <created>1729969223153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729969223153</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kk" />
     <MESSAGE value="POST request, GUI create" />
-    <option name="LAST_COMMIT_MESSAGE" value="POST request, GUI create" />
+    <MESSAGE value="responsive GUI" />
+    <MESSAGE value="Documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
   </component>
 </project>

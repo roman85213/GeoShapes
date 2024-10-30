@@ -11,7 +11,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;

@@ -13,7 +13,7 @@ public class ShapeGUI extends JDialog {
     private JButton buttonMakeRequest;
     private JTextArea textAreaInput;
     private JTextArea textAreaFilled;
-    private Controller controller;
+    private final Controller controller;
 
     public ShapeGUI(Controller controller) {
         this.controller = controller;
